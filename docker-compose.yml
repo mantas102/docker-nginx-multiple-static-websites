@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./site.conf:/etc/nginx/conf.d/default.conf
+      - ./static-application-1:/var/www/html/app1
+      - ./static-application-2:/var/www/html/app2
